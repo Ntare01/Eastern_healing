@@ -105,57 +105,60 @@
                         <h1 class="display-5 text-white mb-5">Make Appointment</h1>
                         <form action="https://formspree.io/f/xvgbwjrj" method="POST">
 
-                            <!-- Hidden field to protect from spam bots -->
-                            <input type="hidden" name="form-name" value="contact" />
-                            <p class="hidden" style="display: none;">
-                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                            </p>
-                            
-                            <!-- Hidden field for the email destination -->
-                            <input type="hidden" name="recipient" value="easternhealingclinic.health@gmail.com" />
-                        
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-white border-0 datetimepicker-input"
-                                            placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="time" id="time1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-white border-0 datetimepicker-input"
-                                            placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Make Appointment</button>
-                                </div>
-                            </div>
-                        </form>
+    <!-- Hidden field to protect from spam bots -->
+    <input type="hidden" name="form-name" value="appointment" />
+    <p class="hidden" style="display: none;">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+
+    <!-- Hidden field for the email destination (Formspree uses your project setup) -->
+    <input type="hidden" name="recipient" value="easternhealingclinic.health@gmail.com" />
+
+    <div class="row g-3">
+        <div class="col-12 col-sm-6">
+            <select name="service" class="form-select bg-white border-0" style="height: 55px;">
+                <option selected disabled>Select A Service</option>
+                <option value="Service 1">Service 1</option>
+                <option value="Service 2">Service 2</option>
+                <option value="Service 3">Service 3</option>
+            </select>
+        </div>
+        <div class="col-12 col-sm-6">
+            <select name="doctor" class="form-select bg-white border-0" style="height: 55px;">
+                <option selected disabled>Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+                <option value="Doctor 2">Doctor 2</option>
+                <option value="Doctor 3">Doctor 3</option>
+            </select>
+        </div>
+        <div class="col-12 col-sm-6">
+            <input type="text" name="name" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
+        </div>
+        <div class="col-12 col-sm-6">
+            <input type="email" name="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="date" id="date1" data-target-input="nearest">
+                <input type="text"
+                    name="appointment_date"
+                    class="form-control bg-white border-0 datetimepicker-input"
+                    placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="time" id="time1" data-target-input="nearest">
+                <input type="text"
+                    name="appointment_time"
+                    class="form-control bg-white border-0 datetimepicker-input"
+                    placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary w-100 py-3" type="submit">Make Appointment</button>
+        </div>
+    </div>
+</form>
+
                     </div>
                 </div>
             </div>
